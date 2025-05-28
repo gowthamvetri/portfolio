@@ -6,6 +6,7 @@ import movieRec from '../assets/movie_recommendation.png'
 import notesApp from '../assets/notesApp.png'
 import studyRoom from '../assets/study_Room.png'
 import youtube from '../assets/youtubeclone.png'
+import ecommerce from '../assets/ecommerce.png'
 
 function Projects() {
   const projects = [
@@ -20,7 +21,7 @@ function Projects() {
     {
       title: "E-commerce Platform",
       description: "A full-stack e-commerce platform built with React and Node.js.",
-      image: "/path-to-ecommerce-image.jpg", // Add your project screenshot
+      image: ecommerce,
       techStack: ["React", "Node.js", "MongoDB"],
       githubLink: "https://github.com/yourusername/ecommerce-platform",
       liveLink: "https://yourusername.github.io/ecommerce-platform/",
