@@ -2,18 +2,54 @@ import React from 'react';
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import { fadeIn } from '../variants';
+import movieRec from '../assets/movie_recommendation.png'
+import notesApp from '../assets/notesApp.png'
+import studyRoom from '../assets/study_Room.png'
+import youtube from '../assets/youtubeclone.png'
 
 function Projects() {
   const projects = [
     {
-      title: "Project Name 1",
-      description: "Brief description of your project. What it does, technologies used, and key features.",
-      image: "/path-to-project-image.jpg", // Add your project screenshot
-      techStack: ["React", "Node.js", "MongoDB"],
-      githubLink: "https://github.com/yourusername/project1",
-      liveLink: "https://project1-demo.com",
+      title: "Recommendation System",
+      description: "A web application that provides personalized movie recommendations based on user preferences and viewing history.",
+      image: movieRec,
+      techStack: ["Python"],
+      githubLink: "https://github.com/gowthamvetri/recommendation_system",
+      liveLink: "https://recommendation-system-xi.vercel.app",
     },
-    // Add more projects following the same structure
+    {
+      title: "E-commerce Platform",
+      description: "A full-stack e-commerce platform built with React and Node.js.",
+      image: "/path-to-ecommerce-image.jpg", // Add your project screenshot
+      techStack: ["React", "Node.js", "MongoDB"],
+      githubLink: "https://github.com/yourusername/ecommerce-platform",
+      liveLink: "https://yourusername.github.io/ecommerce-platform/",
+    },
+    {
+      title: "Youtube Clone",
+      description: "A clone of YouTube that allows users to watch and upload videos.",
+      image: youtube,
+      techStack: ["HTML", "CSS"],
+      githubLink: "https://github.com/gowthamvetri/gowtham-youtube",
+      liveLink: "https://gowtham-youtube.vercel.app",
+    },
+    {
+      title: "Virtual Study Room",
+      description: "A virtual study room application that allows users to create and join study sessions.",
+      image: studyRoom,
+      techStack: ["React", "Node.js", "Socket.io"],
+      githubLink: "https://github.com/gowthamvetri/virtualStudyRoom",
+      liveLink: "https://virtual-study-room-blond.vercel.app",
+    },
+    {
+      title: "Notes App",
+      description: "A simple notes application that allows users to create, edit, and delete notes.",
+      image: notesApp,
+      techStack: ["React", "Node.js"],
+      githubLink: "https://github.com/gowthamvetri/notes_App",
+      liveLink: "https://notes-app-s8so.vercel.app/",
+    }
+
   ];
 
   return (

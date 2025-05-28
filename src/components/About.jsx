@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import { fadeIn } from '../variants'
 import { FaUser, FaGraduationCap, FaCode, FaReact, FaJs, FaCss3Alt, FaAccessibleIcon, FaLaptopCode, FaGithub, FaDownload } from "react-icons/fa6";
+import resume from '../assets/714023104029.pdf'; // Adjust the path to your resume file
 
 function About() {
   const [tab, setTab] = useState("personal");
@@ -9,7 +10,7 @@ function About() {
   const handleDownloadResume = () => {
     // Create a link element to download the resume
     const link = document.createElement('a');
-    link.href = '/path-to-your-resume.pdf'; // Replace with your actual resume path
+    link.href = resume; // Replace with your actual resume path
     link.download = 'Gowtham_Resume.pdf'; // Replace with your name
     document.body.appendChild(link);
     link.click();

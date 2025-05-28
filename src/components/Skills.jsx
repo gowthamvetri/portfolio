@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { FaGithub, FaCode, FaJs, FaReact, FaCss3Alt, FaDatabase, FaCertificate, FaChevronLeft, FaChevronRight } from "react-icons/fa6"
 import LeetCode from './Leetcode';
 
+
 function Skills() {
   // Example skill data
   const skills = [
@@ -15,18 +16,18 @@ function Skills() {
   // Example certifications data
   const certifications = [
     {
-      title: "React Developer Certification",
-      issuer: "Meta",
+      title: "Python Essential Training",
+      issuer: "LinkedIn Learning",
       date: "Apr 2024",
-      description: "Completed Meta's official React Developer certification, covering advanced React concepts and best practices.",
-      link: "https://www.coursera.org/account/accomplishments/certificate/EXAMPLE1"
+      description: "Python is one of the most commonly used dynamic languages for many large organizations, including Google, Yahoo, and IBM. Supported on all major operating systems, it comes pre-installed on Macs, as well as most Linux and Unix-based systems. In this course, senior software engineer Ryan Mitchell guides you through all the essentials of learning and using Python. Learn how computers think, as well as how to install Python, pip, and Jupyter Notebook and the basics of writing a program. Explore variables and types, operators, functions, classes, objects, and more. Go over basic data types like ints and floats, Booleans, and strings. Deep dive into basic data structures, control flow, functions, classes, and objects. Find out how to handle errors and exceptions, as well as threads and processes. Plus, discover how to work with different types of files in Python, pass command-line arguments to your Python script, and create modules and packages.",
+      link: "https://www.linkedin.com/learning/certificates/28600b5ea0f1ad1ebaa5711abb3306def10875321ed5f3da1ccc0370235bd308?trk=share_certificate"
     },
     {
-      title: "JavaScript Algorithms and Data Structures",
+      title: "SQL Fundamentals",
       issuer: "freeCodeCamp",
       date: "Jan 2024",
-      description: "Mastered JavaScript fundamentals, ES6, and core data structures through hands-on projects.",
-      link: "https://freecodecamp.org/certification/EXAMPLE2"
+      description: "Data is powerful, but only if you know how to use it. That’s where SQL comes in! In this course, you’ll learn how to use the SQL standardized database language to access and manipulate data stored in databases. Once you know how to use SQL, you’ll be able to join top companies (and even governments!) who use data to make predictions and decisions about everything from what products to develop to how democracy should function. You don’t need any previous coding experience for this course, so dive right in!",
+      link: "https://www.sololearn.com/certificates/CC-WILIH5CT"
     },
     {
       title: "Responsive Web Design",
