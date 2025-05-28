@@ -1,10 +1,20 @@
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import { fadeIn } from '../variants'
-import { FaUser, FaGraduationCap, FaCode, FaReact, FaJs, FaCss3Alt, FaAccessibleIcon, FaLaptopCode, FaGithub } from "react-icons/fa6";
+import { FaUser, FaGraduationCap, FaCode, FaReact, FaJs, FaCss3Alt, FaAccessibleIcon, FaLaptopCode, FaGithub, FaDownload } from "react-icons/fa6";
 
 function About() {
   const [tab, setTab] = useState("personal");
+
+  const handleDownloadResume = () => {
+    // Create a link element to download the resume
+    const link = document.createElement('a');
+    link.href = '/path-to-your-resume.pdf'; // Replace with your actual resume path
+    link.download = 'Gowtham_Resume.pdf'; // Replace with your name
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
 
   return (
     <div className='min-h-screen w-full pt-24 flex items-center justify-center' id='about'>
@@ -18,7 +28,7 @@ function About() {
       >
         {/* Left Side Animation/Avatar */}
         <motion.div
-          className="w-full md:w-auto md:flex hidden flex-[0.7] items-center justify-center mb-8 md:mb-0"
+          className="w-full md:w-auto md:flex hidden flex-[0.7] items-center justify-center mb-8 md:mb-0 flex-col gap-6"
           initial={{ x: -100, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 1.2, type: "spring" }}
@@ -57,10 +67,37 @@ function About() {
               transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
             />
           </motion.svg>
+
+          {/* Download Resume Button */}
+          <motion.button
+            onClick={handleDownloadResume}
+            className="flex items-center gap-2 px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-lg shadow-lg transition-all duration-300 hover:scale-105"
+            initial={{ y: 20, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ delay: 0.5, duration: 0.8 }}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <FaDownload className="text-lg" />
+            Download Resume
+          </motion.button>
         </motion.div>
 
         {/* Right Side Tabs */}
         <div className="flex-[2.5] w-full max-w-3xl">
+          {/* Mobile Resume Button - visible only on mobile */}
+          <div className="md:hidden flex justify-center mb-6">
+            <motion.button
+              onClick={handleDownloadResume}
+              className="flex items-center gap-2 px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-lg shadow-lg transition-all duration-300"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <FaDownload className="text-lg" />
+              Download Resume
+            </motion.button>
+          </div>
+
           <div className='flex items-center justify-center mb-8'>
             <h1 className='text-3xl sm:text-4xl font-bold border-b-4 border-purple-500 pb-2 text-center w-full'>About Me</h1>
           </div>

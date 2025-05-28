@@ -1,30 +1,44 @@
 // src/hooks/useActiveSection.js
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 
 const useActiveSection = (sectionIds) => {
   const [activeSection, setActiveSection] = useState(sectionIds[0]);
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const visible = entries.find((entry) => entry.isIntersecting);
-        console.log("Visible Section:", visible );
-        if (visible) {
-          setActiveSection(visible.target.id);
+  const handleScroll = useCallback(() => {
+    const scrollPosition = window.scrollY + 100; // Offset for navbar
+
+    for (let i = sectionIds.length - 1; i >= 0; i--) {
+      const section = document.getElementById(sectionIds[i]);
+      if (section) {
+        const { offsetTop } = section;
+        if (scrollPosition >= offsetTop) {
+          setActiveSection(sectionIds[i]);
+          break;
         }
-      },
-      {
-        threshold: 0.8,
       }
-    );
-
-    sectionIds.forEach((id) => {
-      const el = document.getElementById(id);
-      if (el) observer.observe(el);
-    });
-
-    return () => observer.disconnect();
+    }
   }, [sectionIds]);
+
+  useEffect(() => {
+    // Initial check
+    handleScroll();
+
+    // Throttled scroll listener
+    let ticking = false;
+    const onScroll = () => {
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          handleScroll();
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    
+    return () => window.removeEventListener('scroll', onScroll);
+  }, [handleScroll]);
 
   return activeSection;
 };
