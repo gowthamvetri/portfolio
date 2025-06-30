@@ -5,10 +5,9 @@ function Footer() {
   const currentYear = new Date().getFullYear();
   
   const socialLinks = [
-    { icon: <FaGithub />, url: "https://github.com/yourusername" },
-    { icon: <FaLinkedinIn />, url: "https://linkedin.com/in/yourusername" },
-    { icon: <FaTwitter />, url: "https://twitter.com/yourusername" },
-    { icon: <FaEnvelope />, url: "mailto:your.email@example.com" }
+    { icon: <FaGithub />, url: "https://github.com/gowthamvetri" },
+    { icon: <FaLinkedinIn />, url: "https://linkedin.com/in/gowtham-v-cse" },
+    { icon: <FaEnvelope />, url: "mailto:gowthamvetriii@gmail.com" }
   ];
 
   const quickLinks = [

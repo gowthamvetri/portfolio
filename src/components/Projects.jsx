@@ -23,16 +23,8 @@ function Projects() {
       description: "A full-stack e-commerce platform built with React and Node.js.",
       image: ecommerce,
       techStack: ["React", "Node.js", "MongoDB"],
-      githubLink: "https://github.com/yourusername/ecommerce-platform",
-      liveLink: "https://yourusername.github.io/ecommerce-platform/",
-    },
-    {
-      title: "Youtube Clone",
-      description: "A clone of YouTube that allows users to watch and upload videos.",
-      image: youtube,
-      techStack: ["HTML", "CSS"],
-      githubLink: "https://github.com/gowthamvetri/gowtham-youtube",
-      liveLink: "https://gowtham-youtube.vercel.app",
+      githubLink: "https://github.com/gowthamvetri/DarkArt",
+      liveLink: "https://dark-art-8nnt.vercel.app/",
     },
     {
       title: "Virtual Study Room",
