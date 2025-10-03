@@ -5,8 +5,9 @@ import { fadeIn } from '../variants';
 import movieRec from '../assets/movie_recommendation.png'
 import notesApp from '../assets/notesApp.png'
 import studyRoom from '../assets/study_Room.png'
-import youtube from '../assets/youtubeclone.png'
+import harsath from "../assets/harsath.png"
 import ecommerce from '../assets/ecommerce.png'
+import casual from '../assets/casual.png'
 
 function Projects() {
   const projects = [
@@ -41,6 +42,20 @@ function Projects() {
       techStack: ["React", "Node.js"],
       githubLink: "https://github.com/gowthamvetri/notes_App",
       liveLink: "https://notes-app-s8so.vercel.app/",
+    },{
+      title: "Portfolio Website",
+      description: "A personal portfolio website to showcase client's projects and skills.",
+      image: harsath,
+      techStack: ["React", "Tailwind CSS"," Framer Motion","NodeMailer"],
+      githubLink: "https://github.com/harsathphoto-byte/photoGraph.git",
+      liveLink: "https://photo-graph-67j8.vercel.app"
+    },{
+      title: "Casual Clothings",
+      description: "A casual clothing website that offers a variety of trendy and comfortable clothing options for everyday wear.",
+      image: casual,
+      techStack: ["React", "Tailwind CSS", "Node.js", "Express", "MongoDB"],
+      githubLink: "https://github.com/Ranjith-casual/casual-clothings.git",
+      liveLink: "https://www.casualclothings.shop/"
     }
 
   ];
